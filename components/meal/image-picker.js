@@ -12,7 +12,7 @@ export default function ImagePicker({label,name}) {
     }
 
     const handleImagePicked = (event)=> {
-        const file = event.target.file[0] ;
+        const file = event.target.files[0] ;
         if(!file) {
             setImagePicked(null) ;
             return ;
