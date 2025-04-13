@@ -20,10 +20,13 @@ export default function ImagePicker({label,name}) {
 
         //not understood
         const fileReader = new FileReader();
-        fileReader.onload = ()=> {
-            setImagePicked(fileReader.result) ;
+        fileReader.onload = ()=> { //This function is triggered once readAsdataURl method is done .
+            setImagePicked(fileReader.result) ;// fileReader.result will have the generated URL
         }
-        fileReader.readAsDataURL(file);
+        fileReader.readAsDataURL(file);// it doesnot return any thing , can be accessed using onload .
+        //In order to show it as preview we need to convert it into data URL which is value as inpit for Image element, can be used as source for Image element. 
+        // can be done using builtin class in JS called fileReader class . 
+        
     }
 
     return (

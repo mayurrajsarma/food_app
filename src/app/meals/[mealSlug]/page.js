@@ -9,6 +9,7 @@ export default function MealDetailsPage({params}) {
         notFound(); // displays the closest not-found page .
     }
     meal.instructions = meal.instructions.replace(/\n/g,'<br/>');
+    // console.log(meal.instructions) ;
     return (
         <>
             <header className={classes.header}>
